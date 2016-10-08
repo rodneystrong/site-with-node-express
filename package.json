@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/rodneystrong/site-with-node-express/issues"
   },
-  "homepage": "https://github.com/rodneystrong/site-with-node-express#readme"
+  "homepage": "https://github.com/rodneystrong/site-with-node-express#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
