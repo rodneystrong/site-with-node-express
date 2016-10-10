@@ -1,4 +1,13 @@
+var express = require('express');
+var app = express();
 
+app.get('/', function(req,res) {
+  res.send('<h1>Nice meetups!</h1>');
+});
+
+var server = app.listen(3000, function() {
+  console.log('Go to port 3000 in your browser');
+});
 
 /*The code below refers to the non-express way of doing things
 var http = require('http');
