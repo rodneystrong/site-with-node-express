@@ -1,5 +1,8 @@
 var express = require('express');
+var dataFile = require('data/data.json');
+
 var app = express();
+
 
 app.get('/', function(req,res) {
   res.send('<h1>Nice meetups!</h1>');
