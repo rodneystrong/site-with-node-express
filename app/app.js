@@ -1,15 +1,16 @@
 var express = require('express');
-var dataFile = require('data/data.json');
+var dataFile = require('./data/data.json');
 
 var app = express();
 
+app.set('port', process.env.PORT || 3000);
 
 app.get('/', function(req,res) {
   res.send('<h1>Nice meetups!</h1>');
 });
 
-var server = app.listen(3000, function() {
-  console.log('Go to port 3000 in your browser');
+var server = app.listen(app.get('port'), function() {
+  console.log('Go to port ' + app.get('port') + ' in your browser');
 });
 
 /*The code below refers to the non-express way of doing things
