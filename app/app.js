@@ -1,3 +1,6 @@
+
+
+/*The code below refers to the non-express way of doing things
 var http = require('http');
 
 //req and res stand for request and response
@@ -15,3 +18,4 @@ var myServer = http.createServer(function(req,res) {
 
 myServer.listen(3000);
 console.log('Go to localhost:3000 on your browser');
+*/
