@@ -5,8 +5,15 @@ var app = express();
 
 app.set('port', process.env.PORT || 3000);
 
+
 app.get('/', function(req,res) {
-  res.send('<h1>Nice meetups!</h1>');
+  var info = '';
+
+  // res.send('<h1>Nice meetups!</h1>');
+  res.send(
+    '<h2>' + dataFile.speakers[0].name + '</h2>' + 
+    '<h3>' + dataFile.speakers[0].description + '<h3>'
+  );
 });
 
 var server = app.listen(app.get('port'), function() {
