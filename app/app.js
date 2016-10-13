@@ -11,8 +11,9 @@ app.get('/', function(req,res) {
 
   // res.send('<h1>Nice meetups!</h1>');
   res.send(
-    '<h2>' + dataFile.speakers[0].name + '</h2>' + 
-    '<h3>' + dataFile.speakers[0].description + '<h3>'
+    `<h2>The people!</h2>
+    dataFile.speakers[0].title
+    `
   );
 });
 
