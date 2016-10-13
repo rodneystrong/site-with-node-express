@@ -13,21 +13,17 @@ app.get('/', function(req,res) {
     info += `
     <li>
       <h2>${item.name}</h2>
-    </li>
-    <li>
       <h3>${item.title}</h3>
-    </li>
-    <li>
       <p>${item.summary}</p>
     </li>
-
-
     `
   })
 
   // res.send('<h1>Nice meetups!</h1>');
-  res.send(
-
+  res.send(`
+    <h1>The people!</h1>
+    ${info}
+    `
   );
 });
 
