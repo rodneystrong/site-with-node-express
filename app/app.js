@@ -9,11 +9,25 @@ app.set('port', process.env.PORT || 3000);
 app.get('/', function(req,res) {
   var info = '';
 
+  dataFile.speakers.forEach(function(item){
+    info += `
+    <li>
+      <h2>${item.name}</h2>
+    </li>
+    <li>
+      <h3>${item.title}</h3>
+    </li>
+    <li>
+      <p>${item.summary}</p>
+    </li>
+
+
+    `
+  })
+
   // res.send('<h1>Nice meetups!</h1>');
   res.send(
-    `<h2>The people!</h2>
-    dataFile.speakers[0].title
-    `
+
   );
 });
 
