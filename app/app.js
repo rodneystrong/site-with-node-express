@@ -35,6 +35,20 @@ app.get('/speakers', function(req,res) {
   );
 });
 
+app.get('/speakers/:speakerid', function(req,res) {
+
+  var speaker = dataFile.speakers[req.params.speakerid];
+
+  // res.send('<h1>Nice meetups!</h1>');
+  res.send(`
+    <h2>${speaker.name}</h2>
+    <h3>${speaker.title}</h3>
+    <p>${speaker.summary}</p>
+    `
+  );
+});
+
+
 var server = app.listen(app.get('port'), function() {
   console.log('Go to port ' + app.get('port') + ' in your browser');
 });
