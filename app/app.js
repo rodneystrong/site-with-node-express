@@ -6,49 +6,6 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 
 
-app.get('/', function(req,res) {
-
-  // res.send('<h1>Nice meetups!</h1>');
-  res.send(`
-    <h1>Check out all my peeps!</h1>
-    `
-  );
-});
-
-app.get('/speakers', function(req,res) {
-  var info = '';
-
-  dataFile.speakers.forEach(function(item){
-    info += `
-    <li>
-      <h2>${item.name}</h2>
-      <h3>${item.title}</h3>
-      <p>${item.summary}</p>
-    </li>
-    `
-  })
-
-  // res.send('<h1>Nice meetups!</h1>');
-  res.send(`
-    ${info}
-    `
-  );
-});
-
-app.get('/speakers/:speakerid', function(req,res) {
-
-  var speaker = dataFile.speakers[req.params.speakerid];
-
-  // res.send('<h1>Nice meetups!</h1>');
-  res.send(`
-    <h2>${speaker.name}</h2>
-    <h3>${speaker.title}</h3>
-    <p>${speaker.summary}</p>
-    `
-  );
-});
-
-
 var server = app.listen(app.get('port'), function() {
   console.log('Go to port ' + app.get('port') + ' in your browser');
 });
