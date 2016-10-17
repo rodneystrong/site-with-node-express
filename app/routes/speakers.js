@@ -25,7 +25,9 @@ router.get('/speakers', function(req,res) {
 
 router.get('/speakers/:speakerid', function(req,res) {
 
+  var dataFile = req.app.get('appData');
   var speaker = dataFile.speakers[req.params.speakerid];
+
 
   // res.send('<h1>Nice meetups!</h1>');
   res.send(`
