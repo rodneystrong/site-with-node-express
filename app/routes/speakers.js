@@ -3,6 +3,8 @@ var router = express.Router();
 
 router.get('/speakers', function(req,res) {
   var info = '';
+  //appData comes from the app.js file which was app.set from the dataFile
+  var dataFile = req.app.get('appData')
 
   dataFile.speakers.forEach(function(item){
     info += `

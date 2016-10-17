@@ -5,6 +5,8 @@ var app = express();
 
 app.set('port', process.env.PORT || 3000);
 
+app.set('appData', dataFile)
+
 
 var server = app.listen(app.get('port'), function() {
   console.log('Go to port ' + app.get('port') + ' in your browser');
