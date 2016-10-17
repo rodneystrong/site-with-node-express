@@ -5,7 +5,7 @@ var app = express();
 
 app.set('port', process.env.PORT || 3000);
 
-app.set('appData', dataFile)
+app.set('appData', dataFile);
 
 
 var server = app.listen(app.get('port'), function() {
@@ -13,6 +13,7 @@ var server = app.listen(app.get('port'), function() {
 });
 
 app.use(require('./routes/index'));
+app.use(require('./routes/speakers'));
 
 /*The code below refers to the non-express way of doing things
 var http = require('http');
