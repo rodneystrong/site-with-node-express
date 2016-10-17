@@ -33,3 +33,5 @@ app.get('/speakers/:speakerid', function(req,res) {
     `
   );
 });
+
+module.exports = router; 
