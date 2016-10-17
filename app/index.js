@@ -1,4 +1,6 @@
 var express = require('express');
+var router = express.Router();
+
 var dataFile = require('./data/data.json');
 
 app.get('/', function(req,res) {
