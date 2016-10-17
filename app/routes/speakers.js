@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-app.get('/speakers', function(req,res) {
+router.get('/speakers', function(req,res) {
   var info = '';
 
   dataFile.speakers.forEach(function(item){
@@ -34,4 +34,4 @@ app.get('/speakers/:speakerid', function(req,res) {
   );
 });
 
-module.exports = router; 
+module.exports = router;
