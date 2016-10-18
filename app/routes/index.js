@@ -1,8 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-var dataFile = require('./data/data.json');
-
 router.get('/', function(req,res) {
 
   res.send(`
@@ -11,4 +9,4 @@ router.get('/', function(req,res) {
   );
 });
 
-module.exports = router; 
+module.exports = router;
