@@ -8,12 +8,12 @@ app.set('port', process.env.PORT || 3000);
 app.set('appData', dataFile);
 
 
+app.use(require('./routes/index'));
+app.use(require('./routes/speakers'));
+
 var server = app.listen(app.get('port'), function() {
   console.log('Go to port ' + app.get('port') + ' in your browser');
 });
-
-app.use(require('./routes/index'));
-app.use(require('./routes/speakers'));
 
 /*The code below refers to the non-express way of doing things
 var http = require('http');
