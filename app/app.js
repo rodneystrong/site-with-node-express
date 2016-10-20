@@ -7,6 +7,9 @@ app.set('port', process.env.PORT || 3000);
 
 app.set('appData', dataFile);
 
+//in the line below, we're using express.static to designate app/public to
+//be available to any of our docs. this means i can now go into
+//app/routes/index.js and access app/public/images 
 app.use(express.static('app/public'));
 app.use(require('./routes/index'));
 app.use(require('./routes/speakers'));
