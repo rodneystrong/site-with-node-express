@@ -18,6 +18,7 @@ router.get('/speakers', function(req,res) {
 
   // res.send('<h1>Nice meetups!</h1>');
   res.send(`
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     ${info}
     `
   );
