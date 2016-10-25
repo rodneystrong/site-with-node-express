@@ -9,7 +9,7 @@ router.get('/speakers', function(req,res) {
   dataFile.speakers.forEach(function(item){
     info += `
     <li>
-      <img src="/images/speakers/${item.shortname}.jpg" alt="profile pic">
+      <img src="/images/speakers/${item.shortname}_tn.jpg" alt="profile pic" style="height: 300px;">
       <h2>${item.name}</h2>
       <h3>${item.title}</h3>
       <p>${item.summary}</p>
