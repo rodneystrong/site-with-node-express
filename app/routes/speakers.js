@@ -33,8 +33,8 @@ router.get('/speakers/:speakerid', function(req,res) {
 
   // res.send('<h1>Nice meetups!</h1>');
   res.send(`
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <img src="/images/speakers/${speaker.shortname}.jpg" alt="profile pic">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <img src="/images/speakers/${speaker.shortname}_tn.jpg" alt="profile pic">
     <h2>${speaker.name}</h2>
     <h3>${speaker.title}</h3>
     <p>${speaker.summary}</p>
